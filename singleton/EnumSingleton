@@ -1,0 +1,19 @@
+public enum Singleton{
+	//접근시 Java에서 무조건 1회 초기화되므로 생성시 멀티스레드의 영향을 받지 않는다
+	//https://stackoverflow.com/questions/16771373/singleton-via-enum-way-is-lazy-initialized
+	INSTANCE;
+	
+	//enum은 클래스, 그냥 메소드를 넣어도 된다
+	public Singleton getInstance() {
+		return INSTANCE;
+	}
+	
+	//enum은 클래스, 변수를 넣어도 된다
+	int a = 0;
+	
+	//enum은 클래스, 메소드를 추가해도 된다
+	public synchronized int add(int data){
+        a+=data;
+        return a;
+    }
+}
