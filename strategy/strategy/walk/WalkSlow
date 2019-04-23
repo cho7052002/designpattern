@@ -1,0 +1,12 @@
+package strategy.walk;
+
+public class WalkSlow implements  WalkStrategy {
+    @Override
+    public void walk() {
+        walkSlow();
+    }
+
+    private void walkSlow () {
+        System.out.println("walk 0.1m/s");
+    }
+}
