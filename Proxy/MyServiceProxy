@@ -1,0 +1,23 @@
+public class MyServiceProxy implements MyService {
+    private MyService original;
+
+    public MyServiceProxy (MyService myService){
+        this.original = myService;
+    }
+
+    @Override
+    public int getNum(int a) {
+        System.out.println("getNum: proxy is sending " + a + "...");
+        int result =original.getNum(a);
+        System.out.println("getNum: proxy retrieves " + result + "...");
+        return result;
+    }
+
+    @Override
+    public String getStr(String str) {
+        System.out.println("getStr: proxy is sending " + str + "...");
+        String result = original.getStr(str);
+        System.out.println("getStr: proxy retrieves " + result + "...");
+        return result;
+    }
+}
