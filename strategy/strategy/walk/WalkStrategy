@@ -1,0 +1,5 @@
+package strategy.walk;
+
+public interface WalkStrategy {
+    void walk();
+}
