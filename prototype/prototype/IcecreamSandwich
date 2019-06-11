@@ -1,0 +1,41 @@
+package prototype;
+
+public class IcecreamSandwich implements PrototypeCookie{
+    PrototypeCookie upperCookie;
+    PrototypeCookie lowerCookie;
+    String flavor;
+
+    public void setUpperCookie(PrototypeCookie upperCookie) {
+        this.upperCookie = upperCookie;
+    }
+
+    public PrototypeCookie getUpperCookie() {
+        return upperCookie;
+    }
+
+    public void setLowerCookie(PrototypeCookie lowerCookie) {
+        this.lowerCookie = lowerCookie;
+    }
+
+    public PrototypeCookie getLowerCookie() {
+        return lowerCookie;
+    }
+
+    @Override
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
+    }
+    @Override
+    public String getFlavor() {
+        return flavor;
+    }
+
+    @Override
+    public PrototypeCookie copy() {
+        IcecreamSandwich copy = new IcecreamSandwich();
+        copy.setUpperCookie(upperCookie.copy());
+        copy.setLowerCookie(lowerCookie.copy());
+        copy.setFlavor(flavor);
+        return copy;
+    }
+}
