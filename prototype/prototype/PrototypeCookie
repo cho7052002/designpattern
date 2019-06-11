@@ -1,0 +1,7 @@
+package prototype;
+
+public interface PrototypeCookie {
+    PrototypeCookie copy();
+    String getFlavor();
+    void setFlavor(String flavor);
+}
