@@ -1,0 +1,13 @@
+import prototype.PrototypeCookie;
+
+public class CookieFactory {
+    private PrototypeCookie cookie;
+
+    public void setPrototypeCookie(PrototypeCookie cookie) {
+        this.cookie = cookie;
+    }
+
+    public PrototypeCookie copyCookie() {
+        return cookie.copy();
+    }
+}
